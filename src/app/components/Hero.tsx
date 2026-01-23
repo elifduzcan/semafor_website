@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white pt-32 pb-20 md:pt-40 md:pb-32">
+    <section id="hero" className="relative bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white pt-32 pb-20 md:pt-40 md:pb-32">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{

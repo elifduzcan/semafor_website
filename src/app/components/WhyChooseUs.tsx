@@ -3,20 +3,20 @@ import { CheckCircle } from "lucide-react";
 export function WhyChooseUs() {
   const benefits = [
     {
-      title: "Kanıtlanmış Başarı Geçmişi",
-      description: "Fortune 500 şirketleri ve yenilikçi girişimler için 15 yılı aşkın başarılı proje deneyimi.",
+      title: "Teknopark Köklü Yapı",
+      description: "2014 yılında KOSGEB Ar-Ge İnovasyon desteği ile Dokuz Eylül Üniversitesi Sağlık Teknoparkı bünyesinde kurulduk.",
     },
     {
-      title: "Uzman Ekip",
-      description: "Sertifikalı mühendisler ve veri bilimcilerinden oluşan ekibimiz, yapay zeka, bulut bilişim ve kurumsal yazılım konularında derin uzmanlık sunuyor.",
+      title: "Müşteri Memnuniyeti Odaklı",
+      description: "Yapılan tüm çalışmalarda %100 müşteri memnuniyeti ilke edinilmiş olup, beraber çalışılan bütün kurumların güveni kazanılmıştır.",
     },
     {
-      title: "Çevik Metodoloji",
-      description: "Sürekli geri bildirimli hızlı ve yinelemeli geliştirme, projenizin zaman ve bütçe planında kalmasını sağlar.",
+      title: "Yapay Zeka ve Karar Destek Sistemleri",
+      description: "Mevcut problemleri çözmek ve kritik kararlar almak için yapay zeka, makine öğrenmesi ve karar destek sistemi projeleri geliştiriyoruz.",
     },
     {
-      title: "7/24 Destek",
-      description: "Çözümlerinizin her zaman sorunsuz çalışması için kesintisiz teknik destek ve bakım hizmeti.",
+      title: "AR-GE Uzmanlığı",
+      description: "TÜBİTAK ve KOSGEB destekli katma değeri yüksek AR-GE projeleri ile Yapay Zeka ve Sağlık alanında yenilikçi çözümler üretiyoruz.",
     },
   ];
 
@@ -27,10 +27,10 @@ export function WhyChooseUs() {
           {/* Left Column - Content */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-6">
-              Neden Semafor Teknoloji?
+              Hakkımızda
             </h2>
             <p className="text-lg text-gray-600 mb-10">
-              Sadece çalışan değil, kuruluşunuz için ölçülebilir sonuçlar sağlayan çözümler sunmak için teknik mükemmelliği iş bilgisiyle birleştiriyoruz.
+              Semafor Teknoloji, 2014 yılında KOSGEB Ar-Ge İnovasyon desteği ile Dokuz Eylül Üniversitesi Sağlık Teknoparkı bünyesinde kurulmuştur. Bilişim Teknolojileri sektöründe birçok deneyime sahip Semafor Teknoloji İzmir merkezlidir. Yapılan tüm çalışmalarda müşteri memnuniyeti ilke edinilmiş olup, beraber çalışılan bütün kurumların güveni kazanılmıştır.
             </p>
 
             <div className="space-y-6">

@@ -5,6 +5,7 @@ export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const menuItems = [
+    { label: "Anasayfa", href: "#hero" },
     { label: "Hizmetler", href: "#services" },
     { label: "Projeler", href: "#projects" },
     { label: "Hakkımızda", href: "#about" },
@@ -14,14 +15,11 @@ export function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-28">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="flex items-center">
-              <div className="w-10 h-10 bg-[#0F172A] rounded-lg flex items-center justify-center">
-                <span className="text-white text-xl font-bold">S</span>
-              </div>
-              <span className="ml-3 text-xl font-semibold text-[#0F172A]">Semafor Teknoloji</span>
+            <a href="/" className="flex items-center" aria-label="Semafor Teknoloji">
+              <img src="/logo.png" alt="Semafor Teknoloji" className="h-24 w-auto rounded-md" />
             </a>
           </div>
 
@@ -31,7 +29,7 @@ export function Navigation() {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-gray-700 hover:text-[#0F172A] transition-colors"
+                className="text-lg font-bold text-gray-700 hover:text-[#0F172A] transition-colors"
               >
                 {item.label}
               </a>
@@ -54,7 +52,7 @@ export function Navigation() {
               <a
                 key={item.label}
                 href={item.href}
-                className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#0F172A]"
+                className="block px-4 py-3 text-lg font-semibold text-gray-700 hover:bg-gray-50 hover:text-[#0F172A]"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.label}

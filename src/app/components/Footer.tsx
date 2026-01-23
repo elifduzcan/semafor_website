@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from "lucide-react";
 
 export function Footer() {
   const quickLinks = [
@@ -9,17 +9,17 @@ export function Footer() {
   ];
 
   const services = [
-    { label: "Yapay Zeka Çözümleri", href: "#" },
-    { label: "IoT Geliştirme", href: "#" },
-    { label: "Ar-Ge Hizmetleri", href: "#" },
-    { label: "Web ve Mobil", href: "#" },
+    { label: "Tübitak Projeleri", href: "#services" },
+    { label: "Karar Destek Sistemleri", href: "#services" },
+    { label: "Pazarlama Çözümleri", href: "#services" },
+    { label: "İş Analizleri", href: "#services" },
+    { label: "Yazılım Danışmanlık", href: "#services" },
+    { label: "Veri Bilimi", href: "#services" },
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/semafor-teknoloji/", label: "LinkedIn" },
+    { icon: Instagram, href: "https://www.instagram.com/semafor.teknoloji/", label: "Instagram" },
   ];
 
   return (
@@ -30,13 +30,10 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-6">
-              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-[#0F172A] text-xl font-bold">S</span>
-              </div>
-              <span className="ml-3 text-xl font-semibold">Semafor Teknoloji</span>
+              <span className="text-lg font-semibold">Semafor Teknoloji</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              2011'den beri işletmeleri son teknoloji yapay zeka ve yazılım çözümleriyle güçlendiriyoruz.
+              2014'ten beri işletmeleri son teknoloji yapay zeka ve yazılım çözümleriyle güçlendiriyoruz.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (
@@ -72,12 +69,12 @@ export function Footer() {
           {/* Services */}
           <div>
             <h4 className="font-semibold text-lg mb-6">Hizmetlerimiz</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {services.map((service, index) => (
                 <li key={index}>
                   <a
                     href={service.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
                   >
                     {service.label}
                   </a>
@@ -93,43 +90,22 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-cyan-400 mt-0.5 flex-shrink-0" />
                 <a href="mailto:info@semaforteknoloji.com" className="text-gray-400 hover:text-white transition-colors">
-                  info@semaforteknoloji.com
+                  bilgi@semaforteknoloji.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-cyan-400 mt-0.5 flex-shrink-0" />
                 <a href="tel:+902121234567" className="text-gray-400 hover:text-white transition-colors">
-                  +90 (212) 123 45 67
+                  +90 232 412 80 48
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-cyan-400 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-400">
-                  Teknoloji Caddesi No: 123<br />
-                  İstanbul, Türkiye
+                  Mithatpaşa Caddesi Dokuz Eylül Üniversitesi İnciraltı Yerleşkesi No:56/20 Depark Sağlık Zeytin Binası Ofis:205 Balçova / İZMİR
                 </span>
               </li>
             </ul>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Semafor Teknoloji. All rights reserved.
-            </p>
-            <div className="flex gap-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Gizlilik Politikası
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Kullanım Koşulları
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Çerez Politikası
-              </a>
-            </div>
           </div>
         </div>
       </div>
