@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Send, MessageCircle, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import ReactMarkdown from 'react-markdown';
 
 type Message = {
   id: number;
@@ -33,17 +34,24 @@ export function Chatbot() {
       })),
     };
 
-    const res = await fetch("/api/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-    if (!res.ok) {
-      throw new Error("Chat API error");
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => ({}));
+        console.error("API Hatası Detayı:", errorData);
+        throw new Error(errorData.details || "Chat API error");
+      }
+
+      return (await res.json()) as { text: string };
+    } catch (error) {
+      console.error("Bağlantı Hatası:", error);
+      throw error;
     }
-
-    return (await res.json()) as { text: string };
   }
 
   const handleSend = async () => {
@@ -74,8 +82,7 @@ export function Chatbot() {
         ...prev,
         {
           id: Date.now() + 1,
-          text:
-            "Şu anda yanıt üretemiyorum. Lütfen kısa bir süre sonra tekrar deneyin.",
+          text: "Şu anda yanıt üretemiyorum. Lütfen kısa bir süre sonra tekrar deneyin.",
           sender: "bot",
         },
       ]);
@@ -86,14 +93,13 @@ export function Chatbot() {
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && !e.shiftKey) {
-    e.preventDefault();
-    handleSend();
-  }    
+      e.preventDefault();
+      handleSend();
+    }
   };
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
-      {/* Chatbot Button */}
       {!isOpen && (
         <motion.button
           initial={{ scale: 0 }}
@@ -105,7 +111,6 @@ export function Chatbot() {
         </motion.button>
       )}
 
-      {/* Chatbot Window */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -114,7 +119,6 @@ export function Chatbot() {
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             className="absolute bottom-20 right-0 w-96 h-[550px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-100"
           >
-            {/* Header */}
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-4 flex items-center justify-between">
               <h2 className="font-semibold flex items-center gap-2">
                 <span>Semafor Asistan</span>
@@ -128,22 +132,27 @@ export function Chatbot() {
               </button>
             </div>
 
-            {/* Messages */}
             <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-gray-50/50">
               {messages.map((m) => (
                 <div
                   key={m.id}
                   className={`flex ${m.sender === "user" ? "justify-end" : "justify-start"}`}
                 >
-                  <div className="flex flex-col gap-1">
+                  <div className="flex flex-col gap-1 w-full max-w-[85%]">
                     <div
-                      className={`max-w-[75%] px-4 py-2 rounded-xl text-sm ${
+                      className={`px-4 py-2 rounded-xl text-sm ${
                         m.sender === "user"
-                          ? "bg-blue-600 text-white rounded-br-none"
-                          : "bg-white text-gray-800 border border-gray-100 rounded-bl-none shadow-sm"
+                          ? "bg-blue-600 text-white rounded-br-none ml-auto"
+                          : "bg-white text-gray-800 border border-gray-100 rounded-bl-none shadow-sm mr-auto"
                       }`}
                     >
-                      {m.text}
+                      {m.sender === "bot" ? (
+                        <div className="prose prose-sm max-w-none prose-p:leading-relaxed prose-strong:font-bold prose-invert-0">
+                          <ReactMarkdown>{m.text}</ReactMarkdown>
+                        </div>
+                      ) : (
+                        m.text
+                      )}
                     </div>
                   </div>
                 </div>
@@ -160,11 +169,9 @@ export function Chatbot() {
                   </div>
                 </div>
               )}
-
               <div ref={messagesEndRef} />
             </div>
 
-            {/* Input */}
             <div className="p-3 border-t bg-white flex gap-2">
               <input
                 type="text"
