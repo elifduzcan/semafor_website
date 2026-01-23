@@ -58,6 +58,11 @@ export function FeaturedProjects() {
       description: "Marina içerisindeki teknelerin limana giriş çıkış hareketleri, kara ve denizdeki konumları bluetooth, kablosuz algılayıcı ağları gibi teknolojiler ile izlenmiştir. Teknelerin bakım ve onarım süreçleri takip edilmiştir.",
       image: "/adapa marina.jpg",
     },
+    {
+      title: "Doküman Yönetim Sistemi",
+      description: "Kurumsal içerik yönetimi platformu, kağıda dayalı iş süreçlerinin kesintisiz, her yönden otomasyonla tam entegre bir ortama dönüştürülmesini sağlar. Belge, form ve süreç yönetim sistemi, belge takibi, kayıt yönetimi, arşiv yönetimi, belge yönetimi, iş akışı yönetimi ve form yönetimi için eksiksiz bir web tabanlı sistem sunar. ",
+      image: "/doküman1.png",
+    },
   ];
 
   return (
