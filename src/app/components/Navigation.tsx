@@ -1,8 +1,10 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const menuItems = [
     { label: "Anasayfa", href: "#hero" },
@@ -25,15 +27,18 @@ export function Navigation() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {menuItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-lg font-bold text-gray-700 hover:text-[#0F172A] transition-colors"
-              >
-                {item.label}
-              </a>
-            ))}
+            {menuItems.map((item) => {
+              const href = location.pathname === "/" ? item.href : `/${item.href}`;
+              return (
+                <a
+                  key={item.label}
+                  href={href}
+                  className="text-lg font-bold text-gray-700 hover:text-[#0F172A] transition-colors"
+                >
+                  {item.label}
+                </a>
+              );
+            })}
           </div>
 
           {/* Mobile Menu Button */}
@@ -48,16 +53,19 @@ export function Navigation() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
-            {menuItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="block px-4 py-3 text-lg font-semibold text-gray-700 hover:bg-gray-50 hover:text-[#0F172A]"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.label}
-              </a>
-            ))}
+            {menuItems.map((item) => {
+              const href = location.pathname === "/" ? item.href : `/${item.href}`;
+              return (
+                <a
+                  key={item.label}
+                  href={href}
+                  className="block px-4 py-3 text-lg font-semibold text-gray-700 hover:bg-gray-50 hover:text-[#0F172A]"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              );
+            })}
           </div>
         )}
       </div>

@@ -34,11 +34,8 @@ export function Hero() {
                   onClick={() => window.location.href = "/danismanlik"}
                   className="group bg-[#1E2F41] text-white px-8 py-4 rounded-lg hover:bg-[#2C3E50] transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-blue-900/20"
                 >
-                  <span>Ücretsiz Danışmanlık</span>
+                  <span>Bize Ulaşın</span>
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </button>
-                <button className="bg-white border-2 border-[#1E2F41] text-[#1E2F41] px-8 py-4 rounded-lg hover:bg-blue-50 transition-all duration-300 font-medium">
-                  Demo Talep Et
                 </button>
               </div>
 
