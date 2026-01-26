@@ -30,7 +30,7 @@ export function WhyChooseUs() {
               Hakkımızda
             </h2>
             <p className="text-lg text-gray-600 mb-10">
-              Semafor Teknoloji, 2014 yılında KOSGEB Ar-Ge İnovasyon desteği ile Dokuz Eylül Üniversitesi Sağlık Teknoparkı bünyesinde kurulmuştur. Bilişim Teknolojileri sektöründe birçok deneyime sahip Semafor Teknoloji İzmir merkezlidir. Yapılan tüm çalışmalarda müşteri memnuniyeti ilke edinilmiş olup, beraber çalışılan bütün kurumların güveni kazanılmıştır.
+              Semafor Teknoloji, 2014 yılında KOSGEB Ar-Ge İnovasyon desteği ile Dokuz Eylül Üniversitesi Sağlık Teknoparkı bünyesinde kurulmuştur. Yapılan tüm çalışmalarda müşteri memnuniyeti ilke edinilmiş olup, beraber çalışılan bütün kurumların güveni kazanılmıştır.
             </p>
 
             <div className="space-y-6">
