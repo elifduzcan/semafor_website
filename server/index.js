@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import nodemailer from "nodemailer";
 
 const app = express();
 app.use(cors());
@@ -38,9 +39,9 @@ Yanıt Kuralları:
 `;
 
 const generationConfig = {
-  temperature: 0.2, // Daha kurumsal ve tutarlı yanıtlar için düşürdük
+  temperature: 0.2,
   topP: 0.8,
-  maxOutputTokens: 100, // Yanıt uzunluğunu sınırladık
+  maxOutputTokens: 100,
 };
 
 app.post("/api/chat", async (req, res) => {
@@ -52,8 +53,6 @@ app.post("/api/chat", async (req, res) => {
       parts: [{ text: String(m.content || "") }],
     }));
 
-    // SENİN LİSTENDİĞİ GİBİ: gemini-2.5-flash kullanıyoruz
-    // Bu model senin sisteminde "generateContent" destekliyor
     const model = genAI.getGenerativeModel({
       model: "gemini-2.5-flash", 
       systemInstruction: SYSTEM_INSTRUCTION,
@@ -67,7 +66,6 @@ app.post("/api/chat", async (req, res) => {
   } catch (error) {
     console.error("Gemini API Detaylı Hata:", error);
     
-    // Eğer hala kota hatası (429) alırsan, yeni key'in aktifleşmesi için 2 dk bekle
     return res.status(error.status || 500).json({ 
       error: "Sunucu hatası", 
       details: error.message 
@@ -75,7 +73,56 @@ app.post("/api/chat", async (req, res) => {
   }
 });
 
-const PORT = 3001;
+app.post("/api/consultation", async (req, res) => {
+  const { name, company, email, phone, message } = req.body || {};
+
+  if (!name || !email || !message) {
+    return res.status(400).json({
+      ok: false,
+      message: "Zorunlu alanlar eksik",
+    });
+  }
+
+  const transporter = nodemailer.createTransport({
+    service : "gmail",
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+  });
+
+  try {
+    await transporter.sendMail({
+      from: `"Semafor Website" <${process.env.SMTP_USER}>`,
+      to: process.env.TO_EMAIL,
+      replyTo: email,
+      subject: `Yeni Consultation Talebi - ${name}`,
+      text: `
+Ad Soyad: ${name}
+Firma: ${company || "-"}
+E-posta: ${email}
+Telefon: ${phone || "-"}
+
+Mesaj:
+${message}
+      `,
+    });
+
+    return res.json({ ok: true });
+  } catch (err) {
+    console.error("Mail gönderme hatası:", err);
+    return res.status(500).json({
+      ok: false,
+      message: "Mail gönderilemedi",
+    });
+  }
+});
+
+/* ======================================================
+   SERVER START
+====================================================== */
+
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Backend http://localhost:${PORT} adresinde aktif.`);
 });

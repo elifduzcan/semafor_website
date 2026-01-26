@@ -26,7 +26,7 @@ export function Hero() {
                 ile Dönüştürün
               </h1>
               <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl leading-relaxed">
-                Bulut bilişim, veri analitiği ve yapay zeka çözümlerimizle işletmenizi dijital çağa taşıyoruz. Performansı artırın, maliyetleri düşürün.
+                Bulut bilişim, veri analitiği ve yapay zeka çözümlerimizle işletmenizi dijital çağa taşıyoruz.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
