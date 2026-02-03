@@ -76,7 +76,6 @@ app.post("/api/chat", async (req, res) => {
       parts: [{ text: String(m.content || "") }],
     }));
 
-    // Determine language: prefer explicit lang from client, otherwise detect from last user message
     const lastUserMsgObj = Array.isArray(messages) ? [...messages].reverse().find(m => m.role === 'user') : null;
     const lastUserText = lastUserMsgObj ? String(lastUserMsgObj.content || "") : '';
 
@@ -157,10 +156,6 @@ ${message}
     });
   }
 });
-
-/* ======================================================
-   SERVER START
-====================================================== */
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
