@@ -1,24 +1,9 @@
 import { CheckCircle } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 export function WhyChooseUs() {
-  const benefits = [
-    {
-      title: "Teknopark Köklü Yapı",
-      description: "2014 yılında KOSGEB Ar-Ge İnovasyon desteği ile Dokuz Eylül Üniversitesi Sağlık Teknoparkı bünyesinde kurulduk.",
-    },
-    {
-      title: "Müşteri Memnuniyeti Odaklı",
-      description: "Yapılan tüm çalışmalarda %100 müşteri memnuniyeti ilke edinilmiş olup, beraber çalışılan bütün kurumların güveni kazanılmıştır.",
-    },
-    {
-      title: "Yapay Zeka ve Karar Destek Sistemleri",
-      description: "Mevcut problemleri çözmek ve kritik kararlar almak için yapay zeka, makine öğrenmesi ve karar destek sistemi projeleri geliştiriyoruz.",
-    },
-    {
-      title: "AR-GE Uzmanlığı",
-      description: "TÜBİTAK ve KOSGEB destekli katma değeri yüksek AR-GE projeleri ile Yapay Zeka ve Sağlık alanında yenilikçi çözümler üretiyoruz.",
-    },
-  ];
+  const { t } = useTranslation();
+  const benefits = [1,2,3,4];
 
   return (
     <section id="about" className="py-20 md:py-28 bg-white">
@@ -27,24 +12,24 @@ export function WhyChooseUs() {
           {/* Left Column - Content */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-6">
-              Hakkımızda
+              {t('why.heading')}
             </h2>
             <p className="text-lg text-gray-600 mb-10">
-              Semafor Teknoloji, 2014 yılında KOSGEB Ar-Ge İnovasyon desteği ile Dokuz Eylül Üniversitesi Sağlık Teknoparkı bünyesinde kurulmuştur. Yapılan tüm çalışmalarda müşteri memnuniyeti ilke edinilmiş olup, beraber çalışılan bütün kurumların güveni kazanılmıştır.
+              {t('why.aboutText')}
             </p>
 
             <div className="space-y-6">
-              {benefits.map((benefit, index) => (
+              {benefits.map((_, index) => (
                 <div key={index} className="flex gap-4">
                   <div className="flex-shrink-0">
                     <CheckCircle className="h-6 w-6 text-cyan-500" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#0F172A] mb-2">
-                      {benefit.title}
+                      {t(`why.benefit${index + 1}.title`)}
                     </h3>
                     <p className="text-gray-600">
-                      {benefit.description}
+                      {t(`why.benefit${index + 1}.description`)}
                     </p>
                   </div>
                 </div>

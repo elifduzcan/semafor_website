@@ -1,11 +1,14 @@
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 export function Footer() {
+  const { t } = useTranslation();
+
   const quickLinks = [
-    { label: "Hizmetler", href: "#services" },
-    { label: "Projeler", href: "#projects" },
-    { label: "Hakkımızda", href: "#about" },
-    { label: "İletişim", href: "#contact" },
+    { label: t('nav.services'), href: "#services" },
+    { label: t('nav.projects'), href: "#projects" },
+    { label: t('nav.about'), href: "#about" },
+    { label: t('nav.contact'), href: "#contact" },
   ];
 
   const services = [
@@ -30,10 +33,10 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-6">
-              <span className="text-lg font-semibold">Semafor Teknoloji</span>
+              <span className="text-lg font-semibold">{t('footer.company')}</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              2014'ten beri işletmeleri son teknoloji yapay zeka ve yazılım çözümleriyle güçlendiriyoruz.
+              {t('footer.about')}
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (
@@ -51,7 +54,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-6">Hızlı Bağlantılar</h4>
+            <h4 className="font-semibold text-lg mb-6">{t('footer.quickLinks')}</h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -68,28 +71,36 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold text-lg mb-6">Hizmetlerimiz</h4>
+            <h4 className="font-semibold text-lg mb-6">{t('footer.services')}</h4>
             <ul className="space-y-2">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <a
-                    href={service.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
-                  >
-                    {service.label}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a href="#services" className="text-sm text-gray-400 hover:text-white transition-colors">{t('services.s1.title')}</a>
+              </li>
+              <li>
+                <a href="#services" className="text-sm text-gray-400 hover:text-white transition-colors">{t('services.s2.title')}</a>
+              </li>
+              <li>
+                <a href="#services" className="text-sm text-gray-400 hover:text-white transition-colors">{t('services.s3.title')}</a>
+              </li>
+              <li>
+                <a href="#services" className="text-sm text-gray-400 hover:text-white transition-colors">{t('services.s4.title')}</a>
+              </li>
+              <li>
+                <a href="#services" className="text-sm text-gray-400 hover:text-white transition-colors">{t('services.s5.title')}</a>
+              </li>
+              <li>
+                <a href="#services" className="text-sm text-gray-400 hover:text-white transition-colors">{t('services.s6.title')}</a>
+              </li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-semibold text-lg mb-6">İletişim</h4>
+            <h4 className="font-semibold text-lg mb-6">{t('footer.contact')}</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-cyan-400 mt-0.5 flex-shrink-0" />
-                <a href="mailto:info@semaforteknoloji.com" className="text-gray-400 hover:text-white transition-colors">
+                <a href="mailto:bilgi@semaforteknoloji.com" className="text-gray-400 hover:text-white transition-colors">
                   bilgi@semaforteknoloji.com
                 </a>
               </li>
@@ -102,7 +113,7 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-cyan-400 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-400">
-                  Mithatpaşa Caddesi Dokuz Eylül Üniversitesi İnciraltı Yerleşkesi No:56/20 Depark Sağlık Zeytin Binası Ofis:205 Balçova / İZMİR
+                  {t('footer.address')}
                 </span>
               </li>
             </ul>

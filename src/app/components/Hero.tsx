@@ -1,7 +1,9 @@
 import { ArrowRight, Cpu, Cloud, LineChart, Brain } from "lucide-react";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 export function Hero() {
+  const { t } = useTranslation();
   return (
     <section id="hero" className="relative bg-[#F8FAFC] text-[#1E2F41] pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
       {/* Background Decor */}
@@ -19,14 +21,14 @@ export function Hero() {
               transition={{ duration: 0.5 }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-[#1E2F41]">
-                İşinizi{" "}
+                {t('hero.titlePrefix')}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0ea5e9] to-[#0284c7]">
-                  Yapay Zeka
+                  {t('hero.titleHighlight')}
                 </span>{" "}
-                ile Dönüştürün
+                {t('hero.titleSuffix')}
               </h1>
               <p className="text-lg md:text-xl text-slate-600 mb-8 max-w-2xl leading-relaxed">
-                Bulut bilişim, veri analitiği ve yapay zeka çözümlerimizle işletmenizi dijital çağa taşıyoruz.
+                {t('hero.subtitle')}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -34,7 +36,7 @@ export function Hero() {
                   onClick={() => window.location.href = "/danismanlik"}
                   className="group bg-[#1E2F41] text-white px-8 py-4 rounded-lg hover:bg-[#2C3E50] transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-blue-900/20"
                 >
-                  <span>Bize Ulaşın</span>
+                  <span>{t('hero.cta')}</span>
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
@@ -43,15 +45,15 @@ export function Hero() {
               <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-slate-200">
                 <div>
                   <div className="text-3xl font-bold text-[#0ea5e9]">10+</div>
-                  <div className="text-sm text-slate-500 font-medium mt-1">Yıl Deneyim</div>
+                  <div className="text-sm text-slate-500 font-medium mt-1">{t('hero.stats.years')}</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-[#0ea5e9]">%100</div>
-                  <div className="text-sm text-slate-500 font-medium mt-1">Memnuniyet</div>
+                  <div className="text-sm text-slate-500 font-medium mt-1">{t('hero.stats.satisfaction')}</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-[#0ea5e9]">AR-GE</div>
-                  <div className="text-sm text-slate-500 font-medium mt-1">Odaklı Projeler</div>
+                  <div className="text-3xl font-bold text-[#0ea5e9]">{t('hero.stats.rndAbbr')}</div>
+                  <div className="text-sm text-slate-500 font-medium mt-1">{t('hero.stats.projects')}</div>
                 </div>
               </div>
             </motion.div>

@@ -1,37 +1,15 @@
 import { Award, GitBranch, ShoppingCart, TrendingUp, Code, BarChart3 } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 export function Services() {
+  const { t } = useTranslation();
   const services = [
-    {
-      icon: Award,
-      title: "Tübitak Projeleri",
-      description: "Yenilikçi ve yaratıcı projeler ortaya koyarak geleceğe ışık tutuyoruz.",
-    },
-    {
-      icon: GitBranch,
-      title: "Karar Destek Sistemleri",
-      description: "Veri madenciliği ve yapay zeka ile bilişim tekniklerine dayalı, çok fonksiyonlu tahminleme projeleri üretiyoruz.",
-    },
-    {
-      icon: ShoppingCart,
-      title: "Pazarlama Çözümleri",
-      description: "Projelerimizle müşteri segmentasyonu, satış ve pazarlama kampanyası yönetimi yapıyoruz.",
-    },
-    {
-      icon: TrendingUp,
-      title: "İş Analizleri",
-      description: "Geçmiş verilerinizi analiz ederek geleceğe yönelik anlamlı tahminler yapabilmesini sağlıyoruz.",
-    },
-    {
-      icon: Code,
-      title: "Yazılım Danışmanlık",
-      description: "Enerji, giyim, parekende, gıda gibi pek çok alanda yazılım hizmeti veriyoruz.",
-    },
-    {
-      icon: BarChart3,
-      title: "Veri Bilimi",
-      description: "Verilerden değer elde etmek üzere bilimsel yöntemleri, süreçleri, algoritmaları ve sistemleri kullanıyoruz.",
-    },
+    { icon: Award },
+    { icon: GitBranch },
+    { icon: ShoppingCart },
+    { icon: TrendingUp },
+    { icon: Code },
+    { icon: BarChart3 },
   ];
 
   return (
@@ -40,10 +18,10 @@ export function Services() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4">
-            Hizmetlerimiz
+            {t('services.heading')}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto text-center">
-            Her türlü yenilik ve gelişmeyi sürekli takip eden firmamız %100 müşteri memnuniyetini temel ilke tutarak Karar Destek Sistemleri, Yazılım Danışmanlık ve AR-GE alanlarında faaliyet göstermektedir.
+            {t('services.intro')}
           </p>
         </div>
 
@@ -59,11 +37,11 @@ export function Services() {
                   <service.icon className="h-7 w-7 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-[#0F172A]">
-                  {service.title}
+                  {t(`services.s${index + 1}.title`)}
                 </h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                {service.description}
+                {t(`services.s${index + 1}.description`)}
               </p>
             </div>
           ))}

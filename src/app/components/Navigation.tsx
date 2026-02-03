@@ -1,17 +1,21 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
+  const { t } = useTranslation();
+
   const menuItems = [
-    { label: "Anasayfa", href: "#hero" },
-    { label: "Hizmetler", href: "#services" },
-    { label: "Projeler", href: "#projects" },
-    { label: "Hakkımızda", href: "#about" },
-    { label: "İletişim", href: "#contact" },
+    { label: t('nav.home'), href: "#hero" },
+    { label: t('nav.services'), href: "#services" },
+    { label: t('nav.projects'), href: "#projects" },
+    { label: t('nav.about'), href: "#about" },
+    { label: t('nav.contact'), href: "#contact" },
   ];
 
   return (
@@ -39,6 +43,7 @@ export function Navigation() {
                 </a>
               );
             })}
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button */}
@@ -53,7 +58,7 @@ export function Navigation() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
-            {menuItems.map((item) => {
+              {menuItems.map((item) => {
               const href = location.pathname === "/" ? item.href : `/${item.href}`;
               return (
                 <a
@@ -66,6 +71,9 @@ export function Navigation() {
                 </a>
               );
             })}
+            <div className="px-4 pt-4">
+              <LanguageSwitcher />
+            </div>
           </div>
         )}
       </div>

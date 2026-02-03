@@ -3,9 +3,11 @@ import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/Footer";
 import { ArrowLeft, Mail, MapPin, Phone, Send } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 export function Consultation() {
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   const [form, setForm] = useState({
     name: "",
@@ -27,7 +29,7 @@ export function Consultation() {
 
     // Basic validation
     if (!form.name || !form.email || !form.message) {
-      alert("Lütfen Ad Soyad, E-posta ve Proje Detayları alanlarını doldurun.");
+      alert(t('consultation.validation'));
       return;
     }
 
@@ -42,10 +44,10 @@ export function Consultation() {
 
       if (!res.ok) throw new Error("Request failed");
 
-      alert("Gönderildi. En kısa sürede dönüş yapılacaktır.");
+      alert(t('consultation.success'));
       setForm({ name: "", company: "", email: "", phone: "", message: "" });
     } catch (err) {
-      alert("Gönderim sırasında hata oluştu. Lütfen tekrar deneyin.");
+      alert(t('consultation.error'));
     } finally {
       setLoading(false);
     }
@@ -63,10 +65,10 @@ export function Consultation() {
               className="inline-flex items-center text-slate-500 hover:text-[#1E2F41] mb-6 transition-colors"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Ana Sayfaya Dön
+              {t('consultation.back')}
             </Link>
             <h1 className="text-4xl font-extrabold text-[#1E2F41] mb-4">
-              Projenizi Birlikte Planlayalım
+              {t('consultation.heading')}
             </h1>
           </div>
 
@@ -80,7 +82,7 @@ export function Consultation() {
                       htmlFor="name"
                       className="block text-sm font-medium text-slate-700 mb-2"
                     >
-                      Ad Soyad
+                      {t('consultation.name')}
                     </label>
                     <input
                       type="text"
@@ -88,7 +90,7 @@ export function Consultation() {
                       value={form.name}
                       onChange={onChange}
                       className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-[#0ea5e9] focus:ring-2 focus:ring-blue-100 outline-none transition-all"
-                      placeholder="Adınız Soyadınız"
+                      placeholder={t('consultation.placeholderName')}
                     />
                   </div>
                   <div>
@@ -96,7 +98,7 @@ export function Consultation() {
                       htmlFor="company"
                       className="block text-sm font-medium text-slate-700 mb-2"
                     >
-                      Firma Adı
+                      {t('consultation.company')}
                     </label>
                     <input
                       type="text"
@@ -104,7 +106,7 @@ export function Consultation() {
                       value={form.company}
                       onChange={onChange}
                       className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-[#0ea5e9] focus:ring-2 focus:ring-blue-100 outline-none transition-all"
-                      placeholder="Firma Adı"
+                      placeholder={t('consultation.placeholderCompany')}
                     />
                   </div>
                 </div>
@@ -115,7 +117,7 @@ export function Consultation() {
                       htmlFor="email"
                       className="block text-sm font-medium text-slate-700 mb-2"
                     >
-                      E-posta
+                      {t('consultation.email')}
                     </label>
                     <input
                       type="email"
@@ -123,7 +125,7 @@ export function Consultation() {
                       value={form.email}
                       onChange={onChange}
                       className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-[#0ea5e9] focus:ring-2 focus:ring-blue-100 outline-none transition-all"
-                      placeholder="ornek@sirket.com"
+                      placeholder={t('consultation.placeholderEmail')}
                     />
                   </div>
                   <div>
@@ -131,7 +133,7 @@ export function Consultation() {
                       htmlFor="phone"
                       className="block text-sm font-medium text-slate-700 mb-2"
                     >
-                      Telefon
+                      {t('consultation.phone')}
                     </label>
                     <input
                       type="tel"
@@ -139,7 +141,7 @@ export function Consultation() {
                       value={form.phone}
                       onChange={onChange}
                       className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-[#0ea5e9] focus:ring-2 focus:ring-blue-100 outline-none transition-all"
-                      placeholder="0555 555 55 55"
+                      placeholder={t('consultation.placeholderPhone')}
                     />
                   </div>
                 </div>
@@ -149,7 +151,7 @@ export function Consultation() {
                     htmlFor="message"
                     className="block text-sm font-medium text-slate-700 mb-2"
                   >
-                    Proje Detayları / Notlarınız
+                    {t('consultation.message')}
                   </label>
                   <textarea
                     id="message"
@@ -157,7 +159,7 @@ export function Consultation() {
                     value={form.message}
                     onChange={onChange}
                     className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-[#0ea5e9] focus:ring-2 focus:ring-blue-100 outline-none transition-all"
-                    placeholder="Projenizden kısaca bahsedin..."
+                    placeholder={t('consultation.placeholderMessage')}
                   />
                 </div>
 
@@ -166,7 +168,7 @@ export function Consultation() {
                   disabled={loading}
                   className="w-full bg-[#1E2F41] text-white font-semibold py-4 rounded-lg hover:bg-[#2C3E50] transition-colors flex items-center justify-center gap-2 disabled:opacity-60"
                 >
-                  <span>{loading ? "Gönderiliyor..." : "Gönder ve Randevu Oluştur"}</span>
+                  <span>{loading ? t('consultation.submitting') : t('consultation.submit')}</span>
                   <Send className="w-4 h-4" />
                 </button>
               </form>
@@ -176,7 +178,7 @@ export function Consultation() {
             <div className="space-y-8">
               <div className="bg-white rounded-2xl p-8 border border-slate-100">
                 <h3 className="text-xl font-bold text-[#1E2F41] mb-6">
-                  İletişim Bilgileri
+                  {t('consultation.contactHeading')}
                 </h3>
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
@@ -184,9 +186,9 @@ export function Consultation() {
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
-                      <p className="text-sm text-slate-500">E-posta</p>
+                      <p className="text-sm text-slate-500">{t('consultation.email')}</p>
                       <p className="font-medium text-[#1E2F41]">
-                        info@semaforteknoloji.com
+                        {t('footer.email')}
                       </p>
                     </div>
                   </div>
@@ -196,9 +198,9 @@ export function Consultation() {
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
-                      <p className="text-sm text-slate-500">Telefon</p>
+                      <p className="text-sm text-slate-500">{t('consultation.phone')}</p>
                       <p className="font-medium text-[#1E2F41]">
-                        +90 (232) 123 45 67
+                        {t('footer.phone')}
                       </p>
                     </div>
                   </div>
@@ -208,11 +210,9 @@ export function Consultation() {
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
-                      <p className="text-sm text-slate-500">Adres</p>
+                      <p className="text-sm text-slate-500">{t('consultation.addressLabel')}</p>
                       <p className="font-medium text-[#1E2F41]">
-                        Mithatpaşa Caddesi Dokuz Eylül Üniversitesi İnciraltı
-                        Yerleşkesi No:56/20 Depark Sağlık Zeytin Binası Ofis:205
-                        Balçova / İZMİR
+                        {t('footer.address')}
                       </p>
                     </div>
                   </div>

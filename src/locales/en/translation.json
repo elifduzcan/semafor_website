@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "chatbot": {
+    "welcome": "Hello. Could you briefly share your needs so I can recommend the most suitable solution?",
+    "title": "Semafor Assistant",
+    "error": "I cannot produce a response right now. Please try again shortly."
+  },
+  "hero": {
+  "titlePrefix": "Transform your Business",
+  "titleHighlight": "with AI",
+  "titleSuffix": "",
+  "subtitle": "We're bringing your business into the digital age with our cloud computing, data analytics, and artificial intelligence solutions.",
+  "cta": "Contact Us",
+  "stats": { "years": "Years Experience", "satisfaction": "Satisfaction", "projects": "Focused Projects", "rndAbbr": "R&D" }
+},
+ "why": {
+    "heading": "About Us",
+    "aboutText": "Semafor Technology was established in 2014 within Dokuz Eylul University Health Technopark with the support of KOSGEB R&D Innovation. Customer satisfaction is a guiding principle in all our work, and we have earned the trust of all institutions we have worked with.",
+    "benefit1": { "title": "Technopark Rooted Structure", "description": "We were founded in 2014 within Dokuz Eylul University Health Technopark with the support of KOSGEB R&D Innovation." },
+    "benefit2": { "title": "Customer Satisfaction Oriented", "description": "100% customer satisfaction has been adopted as a principle, and the trust of all institutions worked with has been earned." },
+    "benefit3": { "title": "Artificial Intelligence and Decision Support Systems", "description": "We develop AI, machine learning and decision support system projects to solve existing problems and make critical decisions." },
+    "benefit4": { "title": "R&D Expertise", "description": "We provide innovative solutions in AI and Health fields through high value-added R&D projects supported by TUBITAK and KOSGEB." }
+  },
+  "services": {
+    "heading": "Our Services",
+    "intro": "Our company, which keeps up with all kinds of innovations and developments, operates in the areas of Decision Support Systems, Software Consulting, Research and Development Projects by keeping 100% customer satisfaction as a basic principle.",
+    "s1": { "title": "Tubitak Projects", "description": "We shed light on the future by introducing innovative and creative projects." },
+    "s2": { "title": "Decision Support Systems", "description": "With data mining and artificial intelligence we produce multi-functional forecasting projects based on information technologies." },
+    "s3": { "title": "Marketing Solutions", "description": "With our projects, we conduct customer segmentation, sales and marketing campaign management and credit compliance evaluation." },
+    "s4": { "title": "Business Analytics", "description": "We analyze your historical data and make meaningful predictions for the future." },
+    "s5": { "title": "Software Consulting", "description": "We provide software services in many areas such as energy, clothing, retail, food." },
+    "s6": { "title": "Data Science", "description": "We use scientific methods, processes, algorithms and systems to obtain value from data." }
+  },
+  "projects": {
+    "heading": "Our Projects",
+    "intro": "Successful projects we have completed across various industries",
+    "feature1": { "title": "Intensive Care Automation and Decision Support System", "description": "The developed Decision Support System enables early detection of potential conditions and guides physicians in adapting treatment methods and processes accordingly." },
+    "feature2": { "title": "Reflux Decision Support System", "description": "An automation system was developed for the Ege University Reflux Clinic, and patient conditions were reported in detail. Data from the Ege University Reflux Clinic was analyzed to develop a system that guides doctors." },
+    "feature3": { "title": "KLEPI", "description": "Forms of orientel sore disease were moved to digital media to prevent data loss. At the same time, tissues related to the disease are presented to users through the website prepared." },
+    "feature4": { "title": "Cloud Computing Based Estimation Tool", "description": "Multi-funciton forecasting tool based on cloud computing techniques for SME scale companies enables employees to explore information without having knowledge about data mining." },
+    "feature5": { "title": "OT/VT Supported Customer Product Management & Recommendation System", "description": "With the decision support mechanism developed using RFID technology, both planning sales and ordeers for the future and suggestions for customers have been developed." },
+    "feature6": { "title": "DEMETER Decision Support System", "description": "The company's food production analyses have been conducted. The company's raw material suppliers were scored, and analyses of production efficiency, product returns, raw material waste, and product waste were performed, and the results were communicated to the company." },
+    "feature7": { "title": "Sixt Rent A Car Damage Tracking System", "description": "Damage and accident images are stored using mobile devices, and insurance information is transferred to the system, enabling the tracking of the processes. The processes have been reported in detail." },
+    "feature8": { "title": "Elevator Inspection System", "description": "Inspection results were analyzed through data mining techniques to provide actionable insights such as preferred companies or brands; results were delivered as a service to the client." },
+    "feature9": { "title": "Sixt Rent A Car CRM", "description": "A data-driven management system enabled customers to earn and spend points and allowed for management of unused points; customer profiles and priority rankings were identified." },
+    "feature10": { "title": "Adapa Marina Monitoring System", "description": "The movements of boats entering and leaving the marina, as well as their locations on land and at sea, were monitored using technologies such as Bluetooth and wireless sensor networks. The maintenance and repair processes of the boats were also tracked." },
+    "feature11": { "title": "Document Management System", "description": "The enterprise content management platform transforms paper-based business processes into a fully integrated and automated digital environment. It provides a web-based solution for document and record tracking, archive and document management, workflow automation, and form management." }
+  },
+  "footer": {
+    "company": "Semafor Teknoloji",
+    "about": "Empowering businesses with state-of-the-art AI and software solutions since 2014.",
+    "quickLinks": "Quick Links",
+    "services": "Our Services",
+    "contact": "Contact",
+    "email": "bilgi@semaforteknoloji.com",
+    "phone": "+90 232 412 80 48",
+    "address": "Mithatpaşa Street, Dokuz Eylul University, Inciralti Campus No:56/20 Depark Health Olive Building Office:205 Balçova / IZMIR",
+    "socialLinkedIn": "LinkedIn",
+    "socialInstagram": "Instagram"
+  },
+  "consultation": {
+    "back": "Back to Home",
+    "heading": "Let's Plan Your Project Together",
+    "name": "Full Name",
+    "company": "Company Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Project Details / Notes",
+    "placeholderName": "Your full name",
+    "placeholderCompany": "Company Name",
+    "placeholderEmail": "example@company.com",
+    "placeholderPhone": "+1 555 555 5555",
+    "placeholderMessage": "Briefly describe your project...",
+    "submit": "Send and Request Meeting",
+    "submitting": "Sending...",
+    "success": "Sent. We will get back to you shortly.",
+    "error": "An error occurred while sending. Please try again.",
+    "validation": "Please fill in Full Name, Email and Project Details fields.",
+    "contactHeading": "Contact Information",
+    "addressLabel": "Address"
+  }
+}

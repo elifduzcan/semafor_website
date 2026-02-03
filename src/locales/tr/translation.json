@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "home": "Anasayfa",
+    "services": "Hizmetler",
+    "projects": "Projeler",
+    "about": "Hakkımızda",
+    "contact": "İletişim"
+  },
+  "chatbot": {
+    "welcome": "Merhaba. Size en uygun çözümü önerebilmem için ihtiyacınızı kısaca paylaşır mısınız?",
+    "title": "Semafor Asistan",
+    "error": "Şu anda yanıt üretemiyorum. Lütfen kısa bir süre sonra tekrar deneyin."
+  },
+  "hero": {
+    "titlePrefix": "İşinizi",
+    "titleHighlight": "Yapay Zeka",
+    "titleSuffix": "ile Dönüştürün",
+    "subtitle": "Bulut bilişim, veri analitiği ve yapay zeka çözümlerimizle işletmenizi dijital çağa taşıyoruz.",
+    "cta": "Bize Ulaşın",
+    "stats": { "years": "Yıl Deneyim", "satisfaction": "Memnuniyet", "projects": "Odaklı Projeler", "rndAbbr": "AR-GE" }
+  },
+  "why": {
+    "heading": "Hakkımızda",
+    "aboutText": "Semafor Teknoloji, 2014 yılında KOSGEB Ar-Ge İnovasyon desteği ile Dokuz Eylül Üniversitesi Sağlık Teknoparkı bünyesinde kurulmuştur. Yapılan tüm çalışmalarda müşteri memnuniyeti ilke edinilmiş olup, beraber çalışılan bütün kurumların güveni kazanılmıştır.",
+    "benefit1": { "title": "Teknopark Köklü Yapı", "description": "2014 yılında KOSGEB Ar-Ge İnovasyon desteği ile Dokuz Eylül Üniversitesi Sağlık Teknoparkı bünyesinde kurulduk." },
+    "benefit2": { "title": "Müşteri Memnuniyeti Odaklı", "description": "%100 müşteri memnuniyeti ilke edinilmiş olup, beraber çalışılan bütün kurumların güveni kazanılmıştır." },
+    "benefit3": { "title": "Yapay Zeka ve Karar Destek Sistemleri", "description": "Mevcut problemleri çözmek ve kritik kararlar almak için yapay zeka, makine öğrenmesi ve karar destek sistemi projeleri geliştiriyoruz." },
+    "benefit4": { "title": "AR-GE Uzmanlığı", "description": "TÜBİTAK ve KOSGEB destekli katma değeri yüksek AR-GE projeleri ile Yapay Zeka ve Sağlık alanında yenilikçi çözümler üretiyoruz." }
+  },
+  "services": {
+    "heading": "Hizmetlerimiz",
+    "intro": "Her türlü yenilik ve gelişmeyi sürekli takip eden firmamız %100 müşteri memnuniyetini temel ilke tutarak Karar Destek Sistemleri, Yazılım Danışmanlık ve AR-GE alanlarında faaliyet göstermektedir.",
+    "s1": { "title": "Tübitak Projeleri", "description": "Yenilikçi ve yaratıcı projeler ortaya koyarak geleceğe ışık tutuyoruz." },
+    "s2": { "title": "Karar Destek Sistemleri", "description": "Veri madenciliği ve yapay zeka ile bilişim tekniklerine dayalı, çok fonksiyonlu tahminleme projeleri üretiyoruz." },
+    "s3": { "title": "Pazarlama Çözümleri", "description": "Projelerimizle müşteri segmentasyonu, satış ve pazarlama kampanyası yönetimi yapıyoruz." },
+    "s4": { "title": "İş Analizleri", "description": "Geçmiş verilerinizi analiz ederek geleceğe yönelik anlamlı tahminler yapabilmesini sağlıyoruz." },
+    "s5": { "title": "Yazılım Danışmanlık", "description": "Enerji, giyim, parekende, gıda gibi pek çok alanda yazılım hizmeti veriyoruz." },
+    "s6": { "title": "Veri Bilimi", "description": "Verilerden değer elde etmek üzere bilimsel yöntemleri, süreçleri, algoritmaları ve sistemleri kullanıyoruz." }
+  },
+  "projects": {
+    "heading": "Projelerimiz",
+    "intro": "Farklı sektörlerde gerçekleştirdiğimiz başarılı projeler",
+    "feature1": { "title": "Yoğun Bakım Otomasyonu ve Karar Destek Sistemi", "description": "Hazırlanan Karar Destek Sistemi sayesinde önceden oluşabilecek durumların tespiti yapılıp ona göre tedavi şekli ve sürecinin değişiminde hekime yol gösterici bir sistem gerçekleştirilmiştir." },
+    "feature2": { "title": "Reflü Karar Destek Sistemi", "description": "Ege Üniversitesi Reflü Kliniği için otomasyon sistemi geliştirilerek hasta durumları ayrıntılı olarak raporlanmıştır. Ege Üniversitesi Reflü Kliniği verileri analiz edilerek doktorlara yol gösterici sistem geliştirilmiştir." },
+    "feature3": { "title": "KLEPI", "description": "Şark çıbanı hastalığına ait formlar digital ortama taşınarak veri kaybının önüne geçilmiştir. Aynı zamanda hazırlanan web sitesi üzerinden hastalıkla ilgili dokumanlar kullanıcılara sunulmuştur" },
+    "feature4": { "title": "Bulut Bilişim Tabanlı Tahminleme Aracı", "description": "KOBİ ölçekli firmalar için bulut bilişim tekniklerine dayalı, çok fonksiyonlu tahminleme aracı ile firma çalışanlarının veri madenciliği hakkında bilgiye sahip olmadan bilgi keşfi yapabilmeleri sağlanmıştır." },
+    "feature5": { "title": "OT/VT Destekli Müşteri Ürün Yönetimi ve Öneri Sistemi", "description": "RFID teknolojisi kullanılarak geliştirilen Karar Destek Mekanizması ile hem geleceğe yönelik satış ve siparişlerin planlanması hem de müşteriler için öneriler geliştirilmiştir." },
+    "feature6": { "title": "DEMETER Karar Destek Sistemi", "description": "Firmanın gıda üretim analizleri gerçekleştirilmiştir. Firmanın hammadde tedarikçilerinin puanlanması, üretim verimlilik, ürün iade, hammadde zayiat, ürün zayiat analizleri gerçekleştirilerek firmaya sonuçlar aktarılmıştır." },
+    "feature7": { "title": "Sixt Rent A Car Hasar Takip Sistemi", "description": "Hasar ve kazaya ait görüntülerin mobil cihazlar yardımıyla depolanması ve sigorta bilgilerinin sisteme aktarılması ile süreçlerinin takip edilmesi sağlanmıştır. Süreçler ayrıntılı olarak raporlanmıştır." },
+    "feature8": { "title": "Asansör Denetim Sistemi", "description": "Asansör denetimlerinden çıkan sonuçlar veri madenciliği yöntemleri ile analiz edilerek, hangi firma daha iyi, hangi marka asansör alınmalı gibi sorulara cevap üretilmiş ve analiz sonuçları firmaya servis ile açılmıştır" },
+    "feature9": { "title": "Sixt Rent A Car CRM", "description": "Veri madenciliği destekli yönetim sistemi ile müşterilerin puan kazanması, puan harcaması ve harcamadıkları puanların silinmesi sağlanmıştır. Müşterilerin çeşitli özelliklere göre önem sıraları ve profilleri belirlenmiştir" },
+    "feature10": { "title": "Adapa Marina İzleme Sistemi", "description": "Marina içerisindeki teknelerin limana giriş çıkış hareketleri, kara ve denizdeki konumları bluetooth, kablosuz algılayıcı ağları gibi teknolojiler ile izlenmiştir. Teknelerin bakım ve onarım süreçleri takip edilmiştir." },
+    "feature11": { "title": "Doküman Yönetim Sistemi", "description": "Kurumsal içerik yönetimi platformu, kağıda dayalı iş süreçlerinin kesintisiz, her yönden otomasyonla tam entegre bir ortama dönüştürülmesini sağlar. Belge, form ve süreç yönetim sistemi, belge takibi, kayıt yönetimi, arşiv yönetimi, belge yönetimi, iş akışı yönetimi ve form yönetimi için eksiksiz bir web tabanlı sistem sunar." }
+  },
+  "footer": {
+    "company": "Semafor Teknoloji",
+    "about": "2014'ten beri işletmeleri son teknoloji yapay zeka ve yazılım çözümleriyle güçlendiriyoruz.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "services": "Hizmetlerimiz",
+    "contact": "İletişim",
+    "email": "bilgi@semaforteknoloji.com",
+    "phone": "+90 232 412 80 48",
+    "address": "Mithatpaşa Caddesi Dokuz Eylül Üniversitesi İnciraltı Yerleşkesi No:56/20 Depark Sağlık Zeytin Binası Ofis:205 Balçova / İZMİR",
+    "socialLinkedIn": "LinkedIn",
+    "socialInstagram": "Instagram"
+  },
+  "consultation": {
+    "back": "Ana Sayfaya Dön",
+    "heading": "Projenizi Birlikte Planlayalım",
+    "name": "Ad Soyad",
+    "company": "Firma Adı",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "message": "Proje Detayları / Notlarınız",
+    "placeholderName": "Adınız Soyadınız",
+    "placeholderCompany": "Firma Adı",
+    "placeholderEmail": "ornek@sirket.com",
+    "placeholderPhone": "0555 555 55 55",
+    "placeholderMessage": "Projenizden kısaca bahsedin...",
+    "submit": "Gönder ve Randevu Oluştur",
+    "submitting": "Gönderiliyor...",
+    "success": "Gönderildi. En kısa sürede dönüş yapılacaktır.",
+    "error": "Gönderim sırasında hata oluştu. Lütfen tekrar deneyin.",
+    "validation": "Lütfen Ad Soyad, E-posta ve Proje Detayları alanlarını doldurun.",
+    "contactHeading": "İletişim Bilgileri",
+    "addressLabel": "Adres"
+  }
+}

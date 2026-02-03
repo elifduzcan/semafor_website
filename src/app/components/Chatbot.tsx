@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Send, MessageCircle, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import ReactMarkdown from 'react-markdown';
+import { useTranslation } from 'react-i18next';
 
 type Message = {
   id: number;
@@ -17,6 +18,7 @@ export function Chatbot() {
       sender: "bot",
     },
   ]);
+  const { t } = useTranslation();
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -26,8 +28,16 @@ export function Chatbot() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
+  // Update default bot welcome message when language changes
+  useEffect(() => {
+    setMessages((prev) =>
+      prev.map((m) => (m.id === 1 && m.sender === 'bot' ? { ...m, text: t('chatbot.welcome') } : m))
+    );
+  }, [t]);
+
   async function callChatApi(allMessages: Message[]) {
     const payload = {
+      lang: (typeof navigator !== 'undefined' && (navigator.language || (navigator.languages && navigator.languages[0]))) || 'tr',
       messages: allMessages.map((m) => ({
         role: m.sender === "user" ? "user" : "model",
         content: m.text,
@@ -82,7 +92,7 @@ export function Chatbot() {
         ...prev,
         {
           id: Date.now() + 1,
-          text: "Şu anda yanıt üretemiyorum. Lütfen kısa bir süre sonra tekrar deneyin.",
+          text: t('chatbot.error'),
           sender: "bot",
         },
       ]);
@@ -121,7 +131,7 @@ export function Chatbot() {
           >
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-4 flex items-center justify-between">
               <h2 className="font-semibold flex items-center gap-2">
-                <span>Semafor Asistan</span>
+                <span>{t('chatbot.title')}</span>
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
               </h2>
               <button
@@ -140,11 +150,10 @@ export function Chatbot() {
                 >
                   <div className="flex flex-col gap-1 w-full max-w-[85%]">
                     <div
-                      className={`px-4 py-2 rounded-xl text-sm ${
-                        m.sender === "user"
+                      className={`px-4 py-2 rounded-xl text-sm ${m.sender === "user"
                           ? "bg-blue-600 text-white rounded-br-none ml-auto"
                           : "bg-white text-gray-800 border border-gray-100 rounded-bl-none shadow-sm mr-auto"
-                      }`}
+                        }`}
                     >
                       {m.sender === "bot" ? (
                         <div className="prose prose-sm max-w-none prose-p:leading-relaxed prose-strong:font-bold prose-invert-0">
