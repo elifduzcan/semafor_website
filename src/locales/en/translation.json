@@ -12,54 +12,149 @@
     "error": "I cannot produce a response right now. Please try again shortly."
   },
   "hero": {
-  "titlePrefix": "Transform your Business",
-  "titleHighlight": "with AI",
-  "titleSuffix": "",
-  "subtitle": "We're bringing your business into the digital age with our cloud computing, data analytics, and artificial intelligence solutions.",
-  "cta": "Contact Us",
-  "stats": { "years": "Years Experience", "satisfaction": "Satisfaction", "projects": "Focused Projects", "rndAbbr": "R&D" }
-},
- "why": {
+    "titlePrefix": "Transform your Business",
+    "titleHighlight": "with AI",
+    "titleSuffix": "",
+    "subtitle": "We're bringing your business into the digital age with our cloud computing, data analytics, and artificial intelligence solutions.",
+    "cta": "Contact Us",
+    "stats": {
+      "years": "Years Experience",
+      "satisfaction": "Satisfaction",
+      "projects": "Focused Projects",
+      "rndAbbr": "R&D"
+    }
+  },
+  "why": {
     "heading": "About Us",
     "aboutText": "Semafor Technology was established in 2014 within Dokuz Eylul University Health Technopark with the support of KOSGEB R&D Innovation. Customer satisfaction is a guiding principle in all our work, and we have earned the trust of all institutions we have worked with.",
-    "benefit1": { "title": "Technopark Rooted Structure", "description": "We were founded in 2014 within Dokuz Eylul University Health Technopark with the support of KOSGEB R&D Innovation." },
-    "benefit2": { "title": "Customer Satisfaction Oriented", "description": "100% customer satisfaction has been adopted as a principle, and the trust of all institutions worked with has been earned." },
-    "benefit3": { "title": "Artificial Intelligence and Decision Support Systems", "description": "We develop AI, machine learning and decision support system projects to solve existing problems and make critical decisions." },
-    "benefit4": { "title": "R&D Expertise", "description": "We provide innovative solutions in AI and Health fields through high value-added R&D projects supported by TUBITAK and KOSGEB." }
+    "benefit1": {
+      "title": "Technopark Rooted Structure",
+      "description": "We were founded in 2014 within Dokuz Eylul University Health Technopark with the support of KOSGEB R&D Innovation."
+    },
+    "benefit2": {
+      "title": "Customer Satisfaction Oriented",
+      "description": "100% customer satisfaction has been adopted as a principle, and the trust of all institutions worked with has been earned."
+    },
+    "benefit3": {
+      "title": "Artificial Intelligence and Decision Support Systems",
+      "description": "We develop AI, machine learning and decision support system projects to solve existing problems and make critical decisions."
+    },
+    "benefit4": {
+      "title": "R&D Expertise",
+      "description": "We provide innovative solutions in AI and Health fields through high value-added R&D projects supported by TUBITAK and KOSGEB."
+    }
   },
   "services": {
     "heading": "Our Services",
     "intro": "Our company, which keeps up with all kinds of innovations and developments, operates in the areas of Decision Support Systems, Software Consulting, Research and Development Projects by keeping 100% customer satisfaction as a basic principle.",
-    "s1": { "title": "Tubitak Projects", "description": "We shed light on the future by introducing innovative and creative projects." },
-    "s2": { "title": "Decision Support Systems", "description": "With data mining and artificial intelligence we produce multi-functional forecasting projects based on information technologies." },
-    "s3": { "title": "Marketing Solutions", "description": "With our projects, we conduct customer segmentation, sales and marketing campaign management and credit compliance evaluation." },
-    "s4": { "title": "Business Analytics", "description": "We analyze your historical data and make meaningful predictions for the future." },
-    "s5": { "title": "Software Consulting", "description": "We provide software services in many areas such as energy, clothing, retail, food." },
-    "s6": { "title": "Data Science", "description": "We use scientific methods, processes, algorithms and systems to obtain value from data." }
+    "s1": {
+      "title": "Tubitak Projects",
+      "description": "We shed light on the future by introducing innovative and creative projects."
+    },
+    "s2": {
+      "title": "Decision Support Systems",
+      "description": "With data mining and artificial intelligence we produce multi-functional forecasting projects based on information technologies."
+    },
+    "s3": {
+      "title": "Marketing Solutions",
+      "description": "With our projects, we conduct customer segmentation, sales and marketing campaign management and credit compliance evaluation."
+    },
+    "s4": {
+      "title": "Business Analytics",
+      "description": "We analyze your historical data and make meaningful predictions for the future."
+    },
+    "s5": {
+      "title": "Software Consulting",
+      "description": "We provide software services in many areas such as energy, clothing, retail, food."
+    },
+    "s6": {
+      "title": "Data Science",
+      "description": "We use scientific methods, processes, algorithms and systems to obtain value from data."
+    }
   },
   "projects": {
     "heading": "Our Projects",
     "intro": "Successful projects we have completed across various industries",
+    "completedTitle": "Completed Projects",
+    "ongoingTitle": "Ongoing Projects",
     "readMore": "Read More",
     "showLess": "Show Less",
-    "feature1": { "title": "Intensive Care Automation and Decision Support System", "description": "The developed Decision Support System enables early detection of potential conditions and guides physicians in adapting treatment methods and processes accordingly." },
-    "feature2": { "title": "Reflux Decision Support System", "description": "An automation system was developed for the Ege University Reflux Clinic, and patient conditions were reported in detail. Data from the Ege University Reflux Clinic was analyzed to develop a system that guides doctors." },
-    "feature3": { "title": "KLEPI", "description": "Forms of orientel sore disease were moved to digital media to prevent data loss. At the same time, tissues related to the disease are presented to users through the website prepared." },
-    "feature4": { "title": "Cloud Computing Based Estimation Tool", "description": "Multi-funciton forecasting tool based on cloud computing techniques for SME scale companies enables employees to explore information without having knowledge about data mining." },
-    "feature5": { "title": "OT/VT Supported Customer Product Management & Recommendation System", "description": "With the decision support mechanism developed using RFID technology, both planning sales and ordeers for the future and suggestions for customers have been developed." },
-    "feature6": { "title": "DEMETER Decision Support System", "description": "The company's food production analyses have been conducted. The company's raw material suppliers were scored, and analyses of production efficiency, product returns, raw material waste, and product waste were performed, and the results were communicated to the company." },
-    "feature7": { "title": "Sixt Rent A Car Damage Tracking System", "description": "Damage and accident images are stored using mobile devices, and insurance information is transferred to the system, enabling the tracking of the processes. The processes have been reported in detail." },
-    "feature8": { "title": "Elevator Inspection System", "description": "Inspection results were analyzed through data mining techniques to provide actionable insights such as preferred companies or brands; results were delivered as a service to the client." },
-    "feature9": { "title": "Sixt Rent A Car CRM", "description": "A data-driven management system enabled customers to earn and spend points and allowed for management of unused points; customer profiles and priority rankings were identified." },
-    "feature10": { "title": "Adapa Marina Monitoring System", "description": "The movements of boats entering and leaving the marina, as well as their locations on land and at sea, were monitored using technologies such as Bluetooth and wireless sensor networks. The maintenance and repair processes of the boats were also tracked." },
-    "feature11": { "title": "Document Management System", "description": "The enterprise content management platform transforms paper-based business processes into a fully integrated and automated digital environment. It provides a web-based solution for document and record tracking, archive and document management, workflow automation, and form management." },
-    "feature12": { "title": "Digital Twin and Smart Route Optimization System", "description": "Anomaly detection, energy and risk analysis were performed thanks to the digital twin model created using sensor data from the railway infrastructure. The artificial intelligence-supported system determines the most suitable transportation routes by evaluating safety and efficiency criteria together." },
-    "feature13": { "title": "Quality Process Tracking System", "description": "With the completion of the project, quality control steps in production processes have been digitized end-to-end. Operator inputs, laboratory measurements, and reporting processes are collected on a single central platform, ensuring full traceability. Error rates have been reduced through AI-powered decision-making mechanisms, process efficiency has been increased, and a robust integration infrastructure has been established between the systems used." },
-    "feature14": { "title": "SugarTracker - Diabetes Tracking and Management System", "description": "The completed project resulted in the development of a comprehensive healthcare platform that digitizes the treatment and monitoring processes of diabetes patients. The IoT-based medical model, integrated with wearable devices and sensors, allows for real-time monitoring of patient data. A web portal, mobile applications, and a clinical decision support system were successfully integrated, providing physicians with support in creating treatment plans. All modules of the platform were tested and verified, establishing a reliable user infrastructure." },
-    "feature15": { "title": "Out-of-Operating Room Anesthesia Monitoring and Support System", "description": "The completed project developed a comprehensive software system that digitizes out-of-operating room (OOA) anesthesia processes. Considering the mobile work structure of OOA teams, an intelligent task planning infrastructure was created, enabling real-time monitoring of team operations. All patient data before, during, and after anesthesia was recorded digitally; vital signs from monitors were transferred to the system in real time. This eliminated archiving problems and ensured fast, accessible, and reliable data management." },
-    "feature16": { "title": "Development of Wearable Technology-Integrated Software for Detecting COVID-19 Patients and Contacts in Public Spaces", "description": "The completed project resulted in the development of a comprehensive, domestically produced tracking platform for monitoring the spread of COVID-19 and similar infectious diseases within the organization. Thanks to RFID-based contact tracing, identification of contact persons, digital monitoring of temperature measurement data, and multi-language support, the system is ready for both domestic and international use. The project provided managers with real-time notifications, enabling rapid response and creating a digital solution that improves quality of life in terms of public health." },
-    "feature17": { "title": "Voice, LLM, and Computer Vision Based Field Maintenance Automation", "description": "The completed project developed an intelligent support platform based on LLM (Learning Management) and computer vision for electricity distribution companies' field maintenance and repair operations. Real-time images from the field are analyzed using artificial intelligence, enabling teams to make quick decisions. Thanks to the LLM-based voice assistant, teams can access technical information, receive instructions, and be guided throughout the process without using their hands. The system offers a modern operational management structure that both increases workplace safety and reduces carbon emissions by decreasing the need for experts to visit the field." },
-    "feature18": { "title": "Flare - Firefighter Tracking System During a Fire", "description": "With the completed project, a comprehensive tracking system was developed that enhances the safety of firefighters during a fire and facilitates operational management. Firefighters' location, temperature, and other critical sensor data are collected in real-time and securely stored in the cloud. Movement routes in the field are simulated with a mobile application; fire scenarios and team data can be examined in detail via the management portal. The system has been completed as an export-ready solution that significantly increases both operational efficiency and personnel safety."}
+    "feature1": {
+      "title": "Intensive Care Automation and Decision Support System",
+      "description": "The developed Decision Support System enables early detection of potential conditions and guides physicians in adapting treatment methods and processes accordingly."
+    },
+    "feature2": {
+      "title": "Reflux Decision Support System",
+      "description": "An automation system was developed for the Ege University Reflux Clinic, and patient conditions were reported in detail. Data from the Ege University Reflux Clinic was analyzed to develop a system that guides doctors."
+    },
+    "feature3": {
+      "title": "KLEPI",
+      "description": "Forms of orientel sore disease were moved to digital media to prevent data loss. At the same time, tissues related to the disease are presented to users through the website prepared."
+    },
+    "feature4": {
+      "title": "Cloud Computing Based Estimation Tool",
+      "description": "Multi-funciton forecasting tool based on cloud computing techniques for SME scale companies enables employees to explore information without having knowledge about data mining."
+    },
+    "feature5": {
+      "title": "OT/VT Supported Customer Product Management & Recommendation System",
+      "description": "With the decision support mechanism developed using RFID technology, both planning sales and ordeers for the future and suggestions for customers have been developed."
+    },
+    "feature6": {
+      "title": "DEMETER Decision Support System",
+      "description": "The company's food production analyses have been conducted. The company's raw material suppliers were scored, and analyses of production efficiency, product returns, raw material waste, and product waste were performed, and the results were communicated to the company."
+    },
+    "feature7": {
+      "title": "Sixt Rent A Car Damage Tracking System",
+      "description": "Damage and accident images are stored using mobile devices, and insurance information is transferred to the system, enabling the tracking of the processes. The processes have been reported in detail."
+    },
+    "feature8": {
+      "title": "Elevator Inspection System",
+      "description": "Inspection results were analyzed through data mining techniques to provide actionable insights such as preferred companies or brands; results were delivered as a service to the client."
+    },
+    "feature9": {
+      "title": "Sixt Rent A Car CRM",
+      "description": "A data-driven management system enabled customers to earn and spend points and allowed for management of unused points; customer profiles and priority rankings were identified."
+    },
+    "feature10": {
+      "title": "Adapa Marina Monitoring System",
+      "description": "The movements of boats entering and leaving the marina, as well as their locations on land and at sea, were monitored using technologies such as Bluetooth and wireless sensor networks. The maintenance and repair processes of the boats were also tracked."
+    },
+    "feature11": {
+      "title": "Document Management System",
+      "description": "The enterprise content management platform transforms paper-based business processes into a fully integrated and automated digital environment. It provides a web-based solution for document and record tracking, archive and document management, workflow automation, and form management."
+    },
+    "feature12": {
+      "title": "Quality Process Tracking System",
+      "description": "With the completion of the project, quality control steps in production processes have been digitized end-to-end. Operator inputs, laboratory measurements, and reporting processes are collected on a single central platform, ensuring full traceability. Error rates have been reduced through AI-powered decision-making mechanisms, process efficiency has been increased, and a robust integration infrastructure has been established between the systems used."
+    },
+    "feature13": {
+      "title": "SugarTracker - Diabetes Tracking and Management System",
+      "description": "The completed project resulted in the development of a comprehensive healthcare platform that digitizes the treatment and monitoring processes of diabetes patients. The IoT-based medical model, integrated with wearable devices and sensors, allows for real-time monitoring of patient data. A web portal, mobile applications, and a clinical decision support system were successfully integrated, providing physicians with support in creating treatment plans. All modules of the platform were tested and verified, establishing a reliable user infrastructure."
+    },
+    "feature14": {
+      "title": "Out-of-Operating Room Anesthesia Monitoring and Support System",
+      "description": "The completed project developed a comprehensive software system that digitizes out-of-operating room (OOA) anesthesia processes. Considering the mobile work structure of OOA teams, an intelligent task planning infrastructure was created, enabling real-time monitoring of team operations. All patient data before, during, and after anesthesia was recorded digitally; vital signs from monitors were transferred to the system in real time. This eliminated archiving problems and ensured fast, accessible, and reliable data management."
+    },
+    "feature15": {
+      "title": "Development of Wearable Technology-Integrated Software for Detecting COVID-19 Patients and Contacts in Public Spaces",
+      "description": "The completed project resulted in the development of a comprehensive, domestically produced tracking platform for monitoring the spread of COVID-19 and similar infectious diseases within the organization. Thanks to RFID-based contact tracing, identification of contact persons, digital monitoring of temperature measurement data, and multi-language support, the system is ready for both domestic and international use. The project provided managers with real-time notifications, enabling rapid response and creating a digital solution that improves quality of life in terms of public health."
+    },
+    "feature16": {
+      "title": "Voice, LLM, and Computer Vision Based Field Maintenance Automation",
+      "description": "The completed project developed an intelligent support platform based on LLM (Learning Management) and computer vision for electricity distribution companies' field maintenance and repair operations. Real-time images from the field are analyzed using artificial intelligence, enabling teams to make quick decisions. Thanks to the LLM-based voice assistant, teams can access technical information, receive instructions, and be guided throughout the process without using their hands. The system offers a modern operational management structure that both increases workplace safety and reduces carbon emissions by decreasing the need for experts to visit the field."
+    },
+    "feature17": {
+      "title": "Flare - Firefighter Tracking System During a Fire",
+      "description": "With the completed project, a comprehensive tracking system was developed that enhances the safety of firefighters during a fire and facilitates operational management. Firefighters' location, temperature, and other critical sensor data are collected in real-time and securely stored in the cloud. Movement routes in the field are simulated with a mobile application; fire scenarios and team data can be examined in detail via the management portal. The system has been completed as an export-ready solution that significantly increases both operational efficiency and personnel safety."
+    },
+    "ongoing1": {
+      "title": "Digital Twin and Smart Route Optimization System",
+      "description": "Development is ongoing for anomaly detection, energy, and risk analysis using a digital twin model created from railway infrastructure sensor data. The AI-supported system aims to determine the most suitable transportation routes by evaluating safety and efficiency criteria together."
+    },
+    "ongoing2": {
+      "title": "AI-Supported Epicrisis Analysis System",
+      "description": "Development continues on a system that utilizes advanced natural language processing and AI technologies to automatically read and interpret patient epicrisis reports, providing decision support in clinical evaluation processes."
+    }
   },
   "footer": {
     "company": "Semafor Teknoloji",
