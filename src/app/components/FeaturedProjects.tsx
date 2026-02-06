@@ -65,6 +65,11 @@ export function FeaturedProjects() {
       description: t('projects.feature11.description'),
       image: "/doküman1.png",
     },
+    {      
+      title: t('projects.feature12.title'),
+      description: t('projects.feature12.description'),
+      image: "/digitaltwin.png",
+    },
   ];
 
   return (
