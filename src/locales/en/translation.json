@@ -40,6 +40,8 @@
   "projects": {
     "heading": "Our Projects",
     "intro": "Successful projects we have completed across various industries",
+    "readMore": "Read More",
+    "showLess": "Show Less",
     "feature1": { "title": "Intensive Care Automation and Decision Support System", "description": "The developed Decision Support System enables early detection of potential conditions and guides physicians in adapting treatment methods and processes accordingly." },
     "feature2": { "title": "Reflux Decision Support System", "description": "An automation system was developed for the Ege University Reflux Clinic, and patient conditions were reported in detail. Data from the Ege University Reflux Clinic was analyzed to develop a system that guides doctors." },
     "feature3": { "title": "KLEPI", "description": "Forms of orientel sore disease were moved to digital media to prevent data loss. At the same time, tissues related to the disease are presented to users through the website prepared." },

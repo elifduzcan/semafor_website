@@ -6,9 +6,11 @@ import {
   CarouselPrevious,
 } from "@/app/components/ui/carousel";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 
 export function FeaturedProjects() {
   const { t } = useTranslation();
+  const [expandedId, setExpandedId] = useState<number | null>(null);
   const projects = [
     {
       title: t('projects.feature1.title'),
@@ -138,13 +140,33 @@ export function FeaturedProjects() {
                   </div>
 
                   {/* Project Content */}
-                  <div className="p-6 flex-1">
+                  <div className="p-6 flex-1 flex flex-col">
                     <h3 className="text-xl font-semibold text-[#0F172A] mb-3">
                       {project.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {project.description}
-                    </p>
+                    <div className="flex-1">
+                      {expandedId === index ? (
+                        <p className="text-gray-600 leading-relaxed">
+                          {project.description}
+                        </p>
+                      ) : index >= 10 ? (
+                        <p className="text-gray-600 leading-relaxed line-clamp-4">
+                          {project.description}
+                        </p>
+                      ) : (
+                        <p className="text-gray-600 leading-relaxed">
+                          {project.description}
+                        </p>
+                      )}
+                    </div>
+                    {index >= 10 && project.description.length > 100 && (
+                      <button
+                        onClick={() => setExpandedId(expandedId === index ? null : index)}
+                        className="mt-4 text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors"
+                      >
+                        {expandedId === index ? t('projects.showLess') : t('projects.readMore')}
+                      </button>
+                    )}
                   </div>
                 </div>
               </CarouselItem>

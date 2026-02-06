@@ -40,6 +40,8 @@
   "projects": {
     "heading": "Projelerimiz",
     "intro": "Farklı sektörlerde gerçekleştirdiğimiz başarılı projeler",
+    "readMore": "Devamını Oku",
+    "showLess": "Kısalt",
     "feature1": { "title": "Yoğun Bakım Otomasyonu ve Karar Destek Sistemi", "description": "Hazırlanan Karar Destek Sistemi sayesinde önceden oluşabilecek durumların tespiti yapılıp ona göre tedavi şekli ve sürecinin değişiminde hekime yol gösterici bir sistem gerçekleştirilmiştir." },
     "feature2": { "title": "Reflü Karar Destek Sistemi", "description": "Ege Üniversitesi Reflü Kliniği için otomasyon sistemi geliştirilerek hasta durumları ayrıntılı olarak raporlanmıştır. Ege Üniversitesi Reflü Kliniği verileri analiz edilerek doktorlara yol gösterici sistem geliştirilmiştir." },
     "feature3": { "title": "KLEPI", "description": "Şark çıbanı hastalığına ait formlar digital ortama taşınarak veri kaybının önüne geçilmiştir. Aynı zamanda hazırlanan web sitesi üzerinden hastalıkla ilgili dokumanlar kullanıcılara sunulmuştur" },
