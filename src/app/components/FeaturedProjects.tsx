@@ -70,6 +70,37 @@ export function FeaturedProjects() {
       description: t('projects.feature12.description'),
       image: "/digitaltwin.png",
     },
+    {
+      title: t('projects.feature13.title'),
+      description: t('projects.feature13.description'),
+      image: "/quality.png",
+    },
+    {
+      title: t('projects.feature14.title'),
+      description: t('projects.feature14.description'),
+      image: "/sugartracker.png", 
+    },
+    {
+      title: t('projects.feature15.title'),
+      description: t('projects.feature15.description'),
+      image: "/ada_takip.png",
+    },
+    {
+      title: t('projects.feature16.title'),
+      description: t('projects.feature16.description'),
+      image: "/covid.png",
+    },
+    {
+      title: t('projects.feature17.title'),
+      description: t('projects.feature17.description'),
+      image: "/bilgisayarlı_görü.png",
+    },
+    {
+      title: t('projects.feature18.title'),
+      description: t('projects.feature18.description'),
+      image: "/flare.png",
+    },
+    
   ];
 
   return (
